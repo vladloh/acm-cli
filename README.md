@@ -17,7 +17,7 @@ password = 'xxx'
 # full path to folder, created at step 1. For example, '/Users/work/Documents/unic/dp_contests'. 
 folder_path = 'xxx/xxx/xxx'
 ```
-5. Создаём там файл `acm` следующего содержания:
+5. Создаём там файл `acm` следующего содержания и заменяем XXX на путь полученный в пункте 2:
 ```bash
 #!/bin/bash
 
