@@ -16,7 +16,7 @@ password = 'xxx'
 # full path to folder, created at step 1. For example, '/Users/work/Documents/unic/dp_contests'. 
 folder_path = 'xxx/xxx/xxx'
 ```
-5. Создаём файл `acm` следующего содержания:
+5. Создаём там файл `acm` следующего содержания:
 ```bash
 #!/bin/bash
 
@@ -24,9 +24,10 @@ PATH_TO_ACCOUNT=XXX
 python3 $PATH_TO_ACCOUNT/acm-cli/api.py $@
 ```
 6. Делаем файл `acm` исполняемым: `chmod +x acm`
-
+7. Выходим из папки на уровень наверх: `cd ..`
+8. Создаём файл `template.cpp` -- это будет нашим шаблоном. 
 ## Использование утилиты в MacVim
-7. Открываем или создаём файл `~/.vimrc`, добавляем в него такие строчки:
+8. Открываем или создаём файл `~/.vimrc`, добавляем в него такие строчки:
 ```
 command! Gen !./acm-cli/acm gen
 command! Submit !./../acm-cli/acm submit '%:p'
@@ -36,7 +37,7 @@ command! Submissions !./../acm-cli/acm submissions
 "Uncomment this for hotkey F12 for submit
 "autocmd filetype cpp nnoremap <F12> :w <bar> Submit %:p <CR>
 ```
-8. Вызываем в macvim команду `source ~/.vimrc`, чтобы активировать изменения
+9. Вызываем в macvim команду `source ~/.vimrc`, чтобы активировать изменения
 
 Теперь всё готово к использованию в MacVim.  
 Чтобы вызвать очередную команду, нужно написать `Gen/Submit/Status/Submissions` в поле команд.   
