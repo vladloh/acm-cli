@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PATH_TO_ACCOUNT=~/Documents/unic/6_sem/dp_gassa
+
+python3 $PATH_TO_ACCOUNT/parser/api.py $@
