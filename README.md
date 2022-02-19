@@ -21,6 +21,6 @@ folder_path = 'xxx/xxx/xxx'
 #!/bin/bash
 
 PATH_TO_ACCOUNT=XXX
-python3 $PATH_TO_ACCOUNT/parser/api.py $@
+python3 $PATH_TO_ACCOUNT/acm-cli/api.py $@
 ```
 6. Делаем файл `acm` исполняемым: `chmod +x acm`
