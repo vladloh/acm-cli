@@ -27,8 +27,9 @@ python3 $PATH_TO_ACCOUNT/acm-cli/api.py $@
 6. Делаем файл `acm` исполняемым: `chmod +x acm`
 7. Выходим из папки на уровень наверх: `cd ..`
 8. Создаём файл `template.cpp` -- это будет нашим шаблоном. 
+9. Устанавливаем зависимости: `pip3 install requirements.txt`
 ## Использование утилиты в MacVim
-8. Открываем или создаём файл `~/.vimrc`, добавляем в него такие строчки:
+10. Открываем или создаём файл `~/.vimrc`, добавляем в него такие строчки:
 ```
 command! Gen !./acm-cli/acm gen
 command! Submit !./../acm-cli/acm submit '%:p'
@@ -38,7 +39,7 @@ command! Submissions !./../acm-cli/acm submissions
 "Uncomment this for hotkey F12 for submit
 "autocmd filetype cpp nnoremap <F12> :w <bar> Submit %:p <CR>
 ```
-9. Вызываем в macvim команду `source ~/.vimrc`, чтобы активировать изменения
+11. Вызываем в macvim команду `source ~/.vimrc`, чтобы активировать изменения
 
 Теперь всё готово к использованию в MacVim.  
 Чтобы вызвать очередную команду, нужно написать `Gen/Submit/Status/Submissions` в поле команд.   
@@ -48,7 +49,7 @@ command! Submissions !./../acm-cli/acm submissions
 
 
 ## Использование консольной утилиты (независимо от macvim) 
-!!! Может быть неопределенное поведение !!!
+!!! Может быть неопределенное поведение !!!  
 acm gen -- скачивает все имеющиеся контесты. вызывать нужно в папке, куда будут сохраняться контесты 
 acm submit path -- посылает задачу. path должен быть вида .../contest_folder/A.cpp. рекомендуется запускать из папки с задачей текущего контеста. 
 acm status -- выводит статус всех задач текущего контеста. запускать нужно из папки с задачами текущего контеста
